@@ -1,0 +1,12 @@
+yum install epel-release -y
+yum install wget vim unzip make gcc-c++ git -y
+yum install snappy-devel protobuf-devel gflags-devel glog-devel -y
+cd /mnt
+git clone https://github.com/Qihoo360/pika.git
+cd pika
+make
+cp output/bin/pika /usr/sbin/
+cp output/conf/pika.conf /data/pika/conf/
+
+运行命令
+pika -c /data/pika/conf/pika.conf
