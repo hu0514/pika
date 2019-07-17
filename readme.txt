@@ -31,7 +31,7 @@ sentinel
     logfile /log/sentinel.log
     sentinel monitor mymaster 192.168.100.15 9221 2
     sentinel down-after-milliseconds mymaster 3000
-    sentinel failover-timeout mymaster 90000
+    sentinel failover-timeout mymaster 10000
 
     运行命令
     /opt/redis-sentinel  /opt/sentinel.conf
